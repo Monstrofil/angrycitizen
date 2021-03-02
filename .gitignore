@@ -9,3 +9,6 @@
 __pycache__
 MANIFEST
 build/
+venv/
+*.sqlite3
+.idea/
