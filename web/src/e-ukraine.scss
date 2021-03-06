@@ -1,0 +1,38 @@
+@font-face {
+	font-family: "e-ukraine";
+	font-style: normal;
+	src: url("./assets/fonts/web/e-Ukraine-Light.woff") format("woff");
+	font-weight: 300
+}
+
+@font-face {
+	font-family: "e-ukraine";
+	font-style: normal;
+	src: url("./assets/fonts/web/e-Ukraine-Regular.woff") format("woff");
+	font-weight: 400
+}
+
+@font-face {
+	font-family: "e-ukraine";
+	font-style: normal;
+	src: url("./assets/fonts/web/e-Ukraine-Medium.woff") format("woff");
+	font-weight: 500
+}
+
+@font-face {
+	font-family: "e-ukraine-heading";
+	font-style: normal;
+	src: url("./assets/fonts/web/e-UkraineHead-Regular.woff") format("woff");
+	font-weight: 400
+}
+
+body {
+	min-height: 100vh;
+	overflow: auto;
+	overflow-x: hidden;
+	font-family: "e-ukraine";
+	font-weight: 400;
+	background: #F5F5F5;
+	color: #000
+}
+
