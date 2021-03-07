@@ -4,6 +4,27 @@ $font-family-sans-serif:      "e-ukraine";
 $font-family-monospace:       Arial;
 $font-family-base:            $font-family-sans-serif !default;
 
+@import '~@angular/material/theming';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: 'e-ukraine'
+);
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
+// Override the typography in the core CSS.
+@include mat-core($custom-typography);
+
 
 .nav-item {
   border-bottom: 3px solid rgba(0, 0, 0, 0);
@@ -16,5 +37,15 @@ $font-family-base:            $font-family-sans-serif !default;
 
 /* Importing Bootstrap SCSS file. */
 @import 'e-ukraine';
-@import '~bootstrap/scss/bootstrap';
 
+@import "variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/reboot";
+@import "reset";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "e-ukraine"; }
