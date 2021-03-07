@@ -49,3 +49,6 @@ $custom-typography: mat-typography-config(
 
 html, body { height: 100%; }
 body { margin: 0; font-family: "e-ukraine"; }
+
+@import '~mapbox-gl/dist/mapbox-gl.css';
+@import '~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css';

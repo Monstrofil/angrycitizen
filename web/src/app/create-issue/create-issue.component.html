@@ -11,10 +11,20 @@
         <button mat-button matStepperNext>Next</button>
       </div>
     </form>
+    <div *ngFor="let issueType of issueGroups">
+      {{ issueType.name }}
+    </div>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
+    <ng-template matStepLabel>Choose location</ng-template>
+    <div>
+        <mgl-map id="chooseLocationMap"
+          [style]="'mapbox://styles/mapbox/streets-v11'"
+          [zoom]="[9]"
+          [center]="[-74.5, 40]"
+        >
+        </mgl-map>
+    </div>
     <div>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button (click)="stepper.reset()">Reset</button>
